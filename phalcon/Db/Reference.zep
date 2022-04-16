@@ -71,7 +71,7 @@ class Reference implements ReferenceInterface
     /**
      * Schema name
      *
-     * @var string
+     * @var string|null
      */
     protected schemaName { get };
 

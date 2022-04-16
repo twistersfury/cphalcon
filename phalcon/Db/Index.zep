@@ -58,7 +58,7 @@ class Index implements IndexInterface
     /**
      * Index type
      *
-     * @var string
+     * @var string|null
      */
     protected type { get };
 
