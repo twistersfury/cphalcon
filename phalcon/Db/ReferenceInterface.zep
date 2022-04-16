@@ -53,5 +53,5 @@ interface ReferenceInterface
     /**
      * Gets the schema where referenced table is
      */
-    public function getSchemaName() -> string;
+    public function getSchemaName() -> string | null;
 }
