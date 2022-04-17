@@ -60,7 +60,7 @@ class Index implements IndexInterface
      *
      * @var string|null
      */
-    protected type;
+    protected type { get };
 
     /**
      * Phalcon\Db\Index constructor
@@ -70,15 +70,5 @@ class Index implements IndexInterface
         let this->name = name;
         let this->columns = columns;
         let this->type = type;
-    }
-
-    /**
-     * Index type
-     *
-     * @return string|null
-     */
-    public function getType() -> string | null
-    {
-        return this->type;
     }
 }
