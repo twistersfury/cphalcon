@@ -73,7 +73,7 @@ class Reference implements ReferenceInterface
      *
      * @var string|null
      */
-    protected schemaName { get };
+    protected schemaName;
 
     /**
      * ON DELETE
@@ -141,4 +141,14 @@ class Reference implements ReferenceInterface
             );
         }
     }
+
+    /**
+     * Schema name
+     *
+     * @var string|null
+     */
+     public function getSchemaName() -> string | null
+     {
+        return this->schemaName;
+     }
 }
