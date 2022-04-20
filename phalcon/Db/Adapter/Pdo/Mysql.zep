@@ -616,7 +616,8 @@ class Mysql extends PdoAdapter
                     "columns"           : arrayReference["columns"],
                     "referencedColumns" : arrayReference["referencedColumns"],
                     "onUpdate"          : arrayReference["onUpdate"],
-                    "onDelete"          : arrayReference["onDelete"]
+                    "onDelete"          : arrayReference["onDelete"],
+                    "schema"            : schema
                 ]
             );
         }
