@@ -28,5 +28,5 @@ interface IndexInterface
     /**
      * Gets the index type
      */
-    public function getType() -> string | null;
+    public function getType() -> string;
 }
