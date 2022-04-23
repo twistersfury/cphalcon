@@ -73,7 +73,7 @@ class Reference implements ReferenceInterface
      *
      * @var string
      */
-    protected schemaName { get };
+    protected schemaName = "" { get };
 
     /**
      * ON DELETE
