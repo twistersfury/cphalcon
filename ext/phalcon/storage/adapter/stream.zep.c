@@ -1058,7 +1058,7 @@ PHP_METHOD(Phalcon_Storage_Adapter_Stream, getPayload)
 	zend_bool _10;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *filepath_param = NULL, __$false, payload, pointer, version, _0, _1, _2, _3, _4, _9, _5$$6, _6$$6, _7$$7, _8$$7;
+	zval *filepath_param = NULL, __$false, payload, pointer, version, _0, _1, _2, _3, _4, _9, _5$$6, _6$$6, _7$$8, _8$$8;
 	zval filepath;
 	zval *this_ptr = getThis();
 
@@ -1075,8 +1075,8 @@ PHP_METHOD(Phalcon_Storage_Adapter_Stream, getPayload)
 	ZVAL_UNDEF(&_9);
 	ZVAL_UNDEF(&_5$$6);
 	ZVAL_UNDEF(&_6$$6);
-	ZVAL_UNDEF(&_7$$7);
-	ZVAL_UNDEF(&_8$$7);
+	ZVAL_UNDEF(&_7$$8);
+	ZVAL_UNDEF(&_8$$8);
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(filepath)
 	ZEND_PARSE_PARAMETERS_END();
@@ -1118,16 +1118,28 @@ PHP_METHOD(Phalcon_Storage_Adapter_Stream, getPayload)
 	if (zephir_is_true(&_4)) {
 		ZEPHIR_INIT_VAR(&_5$$6);
 		ZEPHIR_INIT_NVAR(&_5$$6);
-		zephir_create_closure_ex(&_5$$6, NULL, phalcon_1__closure_ce, SL("__invoke"));
+			ZEPHIR_INIT_NVAR(&_5$$6);
+			object_init_ex(&_5$$6, phalcon_1__closure_ce);
+			if (zephir_has_constructor(&_5$$6)) {
+				ZEPHIR_CALL_METHOD(NULL, &_5$$6, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
 		ZVAL_LONG(&_6$$6, 8);
 		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_5$$6, &_6$$6);
 		zephir_check_call_status();
 	} else {
-		ZEPHIR_INIT_VAR(&_7$$7);
-		ZEPHIR_INIT_NVAR(&_7$$7);
-		zephir_create_closure_ex(&_7$$7, NULL, phalcon_2__closure_ce, SL("__invoke"));
-		ZVAL_LONG(&_8$$7, 8);
-		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_7$$7, &_8$$7);
+		ZEPHIR_INIT_VAR(&_7$$8);
+		ZEPHIR_INIT_NVAR(&_7$$8);
+			ZEPHIR_INIT_NVAR(&_7$$8);
+			object_init_ex(&_7$$8, phalcon_2__closure_ce);
+			if (zephir_has_constructor(&_7$$8)) {
+				ZEPHIR_CALL_METHOD(NULL, &_7$$8, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
+		ZVAL_LONG(&_8$$8, 8);
+		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_7$$8, &_8$$8);
 		zephir_check_call_status();
 	}
 	ZEPHIR_CALL_FUNCTION(&_9, "unserialize", NULL, 16, &payload);

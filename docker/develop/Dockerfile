@@ -86,7 +86,7 @@ RUN set -eux \
     && find /var/log -type f -delete
 
 # hadolint ignore=DL3022
-COPY --from=composer/composer:2 --chmod=0660 /usr/bin/composer /usr/bin/composer
+COPY --from=composer/composer:2 --chmod=0770 /usr/bin/composer /usr/bin/composer
 COPY docker/develop/.bashrc /root/.bashrc
 COPY docker/develop/extra.ini /usr/local/etc/php/conf.d/
 

@@ -1129,6 +1129,7 @@ PHP_METHOD(Phalcon_Mvc_Router_Annotations, setActionSuffix)
 PHP_METHOD(Phalcon_Mvc_Router_Annotations, setActionPreformatCallback)
 {
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *callback = NULL, callback_sub, __$null, _0$$4;
 	zval *this_ptr = getThis();
 
@@ -1152,7 +1153,13 @@ PHP_METHOD(Phalcon_Mvc_Router_Annotations, setActionPreformatCallback)
 	} else if (Z_TYPE_P(callback) == IS_NULL) {
 		ZEPHIR_INIT_VAR(&_0$$4);
 		ZEPHIR_INIT_NVAR(&_0$$4);
-		zephir_create_closure_ex(&_0$$4, NULL, phalcon_10__closure_ce, SL("__invoke"));
+			ZEPHIR_INIT_NVAR(&_0$$4);
+			object_init_ex(&_0$$4, phalcon_10__closure_ce);
+			if (zephir_has_constructor(&_0$$4)) {
+				ZEPHIR_CALL_METHOD(NULL, &_0$$4, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
 		zephir_update_property_zval(this_ptr, ZEND_STRL("actionPreformatCallback"), &_0$$4);
 	} else {
 		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(phalcon_mvc_router_exception_ce, "The 'callback' parameter must be either a callable or NULL.", "phalcon/Mvc/Router/Annotations.zep", 463);

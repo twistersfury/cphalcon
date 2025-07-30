@@ -98,7 +98,7 @@ PHP_METHOD(Phalcon_Annotations_Adapter_Stream, read)
 {
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *key_param = NULL, __$false, contents, version, _0, _1, _2, _3, _4, _5, _6, _11, _7$$5, _8$$5, _9$$6, _10$$6;
+	zval *key_param = NULL, __$false, contents, version, _0, _1, _2, _3, _4, _5, _6, _11, _7$$5, _8$$5, _9$$7, _10$$7;
 	zval key, path;
 	zval *this_ptr = getThis();
 
@@ -117,8 +117,8 @@ PHP_METHOD(Phalcon_Annotations_Adapter_Stream, read)
 	ZVAL_UNDEF(&_11);
 	ZVAL_UNDEF(&_7$$5);
 	ZVAL_UNDEF(&_8$$5);
-	ZVAL_UNDEF(&_9$$6);
-	ZVAL_UNDEF(&_10$$6);
+	ZVAL_UNDEF(&_9$$7);
+	ZVAL_UNDEF(&_10$$7);
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(key)
 	ZEND_PARSE_PARAMETERS_END();
@@ -154,16 +154,28 @@ PHP_METHOD(Phalcon_Annotations_Adapter_Stream, read)
 	if (zephir_is_true(&_6)) {
 		ZEPHIR_INIT_VAR(&_7$$5);
 		ZEPHIR_INIT_NVAR(&_7$$5);
-		zephir_create_closure_ex(&_7$$5, NULL, phalcon_5__closure_ce, SL("__invoke"));
+			ZEPHIR_INIT_NVAR(&_7$$5);
+			object_init_ex(&_7$$5, phalcon_5__closure_ce);
+			if (zephir_has_constructor(&_7$$5)) {
+				ZEPHIR_CALL_METHOD(NULL, &_7$$5, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
 		ZVAL_LONG(&_8$$5, 2);
 		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_7$$5, &_8$$5);
 		zephir_check_call_status();
 	} else {
-		ZEPHIR_INIT_VAR(&_9$$6);
-		ZEPHIR_INIT_NVAR(&_9$$6);
-		zephir_create_closure_ex(&_9$$6, NULL, phalcon_6__closure_ce, SL("__invoke"));
-		ZVAL_LONG(&_10$$6, 2);
-		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_9$$6, &_10$$6);
+		ZEPHIR_INIT_VAR(&_9$$7);
+		ZEPHIR_INIT_NVAR(&_9$$7);
+			ZEPHIR_INIT_NVAR(&_9$$7);
+			object_init_ex(&_9$$7, phalcon_6__closure_ce);
+			if (zephir_has_constructor(&_9$$7)) {
+				ZEPHIR_CALL_METHOD(NULL, &_9$$7, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
+		ZVAL_LONG(&_10$$7, 2);
+		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_9$$7, &_10$$7);
 		zephir_check_call_status();
 	}
 	ZEPHIR_CALL_FUNCTION(&_11, "unserialize", NULL, 16, &contents);

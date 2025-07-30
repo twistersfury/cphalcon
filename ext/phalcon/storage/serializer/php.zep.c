@@ -73,7 +73,7 @@ PHP_METHOD(Phalcon_Storage_Serializer_Php, unserialize)
 	zend_bool _8;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval data_sub, __$false, __$true, result, version, _0, _1, _2, _3, _4$$4, _5$$4, _6$$5, _7$$5;
+	zval data_sub, __$false, __$true, result, version, _0, _1, _2, _3, _4$$4, _5$$4, _6$$6, _7$$6;
 	zval *data;
 	zval *this_ptr = getThis();
 
@@ -88,8 +88,8 @@ PHP_METHOD(Phalcon_Storage_Serializer_Php, unserialize)
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_5$$4);
-	ZVAL_UNDEF(&_6$$5);
-	ZVAL_UNDEF(&_7$$5);
+	ZVAL_UNDEF(&_6$$6);
+	ZVAL_UNDEF(&_7$$6);
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(data)
 	ZEND_PARSE_PARAMETERS_END();
@@ -114,16 +114,28 @@ PHP_METHOD(Phalcon_Storage_Serializer_Php, unserialize)
 	if (zephir_is_true(&_3)) {
 		ZEPHIR_INIT_VAR(&_4$$4);
 		ZEPHIR_INIT_NVAR(&_4$$4);
-		zephir_create_closure_ex(&_4$$4, NULL, phalcon_11__closure_ce, SL("__invoke"));
+			ZEPHIR_INIT_NVAR(&_4$$4);
+			object_init_ex(&_4$$4, phalcon_11__closure_ce);
+			if (zephir_has_constructor(&_4$$4)) {
+				ZEPHIR_CALL_METHOD(NULL, &_4$$4, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
 		ZVAL_LONG(&_5$$4, 8);
 		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_4$$4, &_5$$4);
 		zephir_check_call_status();
 	} else {
-		ZEPHIR_INIT_VAR(&_6$$5);
-		ZEPHIR_INIT_NVAR(&_6$$5);
-		zephir_create_closure_ex(&_6$$5, NULL, phalcon_12__closure_ce, SL("__invoke"));
-		ZVAL_LONG(&_7$$5, 8);
-		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_6$$5, &_7$$5);
+		ZEPHIR_INIT_VAR(&_6$$6);
+		ZEPHIR_INIT_NVAR(&_6$$6);
+			ZEPHIR_INIT_NVAR(&_6$$6);
+			object_init_ex(&_6$$6, phalcon_12__closure_ce);
+			if (zephir_has_constructor(&_6$$6)) {
+				ZEPHIR_CALL_METHOD(NULL, &_6$$6, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
+		ZVAL_LONG(&_7$$6, 8);
+		ZEPHIR_CALL_FUNCTION(NULL, "set_error_handler", NULL, 135, &_6$$6, &_7$$6);
 		zephir_check_call_status();
 	}
 	ZEPHIR_CALL_METHOD(&result, this_ptr, "phpunserialize", NULL, 0, data);

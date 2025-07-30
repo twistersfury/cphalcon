@@ -884,6 +884,7 @@ PHP_METHOD(Phalcon_Autoload_Loader, setExtensions)
 PHP_METHOD(Phalcon_Autoload_Loader, setFileCheckingCallback)
 {
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *method = NULL, method_sub, __$null, _0$$4;
 	zval *this_ptr = getThis();
 
@@ -907,7 +908,13 @@ PHP_METHOD(Phalcon_Autoload_Loader, setFileCheckingCallback)
 	} else if (Z_TYPE_P(method) == IS_NULL) {
 		ZEPHIR_INIT_VAR(&_0$$4);
 		ZEPHIR_INIT_NVAR(&_0$$4);
-		zephir_create_closure_ex(&_0$$4, NULL, phalcon_7__closure_ce, SL("__invoke"));
+			ZEPHIR_INIT_NVAR(&_0$$4);
+			object_init_ex(&_0$$4, phalcon_7__closure_ce);
+			if (zephir_has_constructor(&_0$$4)) {
+				ZEPHIR_CALL_METHOD(NULL, &_0$$4, "__construct", NULL, 0);
+				zephir_check_call_status();
+			}
+
 		zephir_update_property_zval(this_ptr, ZEND_STRL("fileCheckingCallback"), &_0$$4);
 	} else {
 		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(phalcon_autoload_exception_ce, "The 'method' parameter must be either a callable or NULL", "phalcon/Autoload/Loader.zep", 441);

@@ -303,7 +303,7 @@ PHP_METHOD(Phalcon_Html_TagFactory, getExceptionClass)
 PHP_METHOD(Phalcon_Html_TagFactory, getServices)
 {
 
-	zephir_create_array(return_value, 43, 0);
+	zephir_create_array(return_value, 42, 0);
 	add_assoc_stringl_ex(return_value, SL("a"), SL("Phalcon\\Html\\Helper\\Anchor"));
 	add_assoc_stringl_ex(return_value, SL("base"), SL("Phalcon\\Html\\Helper\\Base"));
 	add_assoc_stringl_ex(return_value, SL("breadcrumbs"), SL("Phalcon\\Html\\Helper\\Breadcrumbs"));

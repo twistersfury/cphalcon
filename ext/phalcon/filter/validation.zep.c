@@ -12,9 +12,9 @@
 #include <Zend/zend_interfaces.h>
 
 #include "kernel/main.h"
-#include "kernel/object.h"
 #include "kernel/memory.h"
 #include "kernel/fcall.h"
+#include "kernel/object.h"
 #include "kernel/operators.h"
 #include "kernel/array.h"
 #include "kernel/exception.h"
@@ -111,13 +111,25 @@ PHP_METHOD(Phalcon_Filter_Validation, __construct)
 	}
 	ZEPHIR_INIT_VAR(&_0);
 	ZEPHIR_INIT_NVAR(&_0);
-	zephir_create_closure_ex(&_0, NULL, phalcon_8__closure_ce, SL("__invoke"));
+		ZEPHIR_INIT_NVAR(&_0);
+		object_init_ex(&_0, phalcon_8__closure_ce);
+		if (zephir_has_constructor(&_0)) {
+			ZEPHIR_CALL_METHOD(NULL, &_0, "__construct", NULL, 0);
+			zephir_check_call_status();
+		}
+
 	ZEPHIR_CALL_FUNCTION(&_1, "array_filter", NULL, 17, &validators, &_0);
 	zephir_check_call_status();
 	zephir_update_property_zval(this_ptr, ZEND_STRL("validators"), &_1);
 	ZEPHIR_INIT_VAR(&_2);
 	ZEPHIR_INIT_NVAR(&_2);
-	zephir_create_closure_ex(&_2, NULL, phalcon_9__closure_ce, SL("__invoke"));
+		ZEPHIR_INIT_NVAR(&_2);
+		object_init_ex(&_2, phalcon_9__closure_ce);
+		if (zephir_has_constructor(&_2)) {
+			ZEPHIR_CALL_METHOD(NULL, &_2, "__construct", NULL, 0);
+			zephir_check_call_status();
+		}
+
 	ZEPHIR_CALL_FUNCTION(&_3, "array_filter", NULL, 17, &validators, &_2);
 	zephir_check_call_status();
 	zephir_update_property_zval(this_ptr, ZEND_STRL("combinedFieldsValidators"), &_3);
